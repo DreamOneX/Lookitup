@@ -7,6 +7,7 @@
 git clone https://github.com/DreamOneX/Lookitup.git
 cd Lookitup
 pip install -r requirements.txt
+# 以下可选（将dict.py拷贝到/usr/bin)
 cp ./dict.py /usr/bin/dict
 cd ..
 ```
@@ -18,6 +19,7 @@ git clone https://github.com/DreamOneX/Lookitup.git&&cd Lookitup&&pip install -r
 ## 使用
 ```bash
 python dict.py word [word ...]
+dict word [word ...]
 ```
 
 ## 举个栗子
@@ -29,10 +31,6 @@ python dict.py hello
 #n. （Hello）（法）埃洛（人名）
 ```
 
-## 另外
-```bash
-
-```
 ## 灵感
 （在Shell中：我超！这个词读什么啊！）
 （默默切换到浏览器）
@@ -42,3 +40,6 @@ python dict.py hello
 （经历一番搜索之后）
 （没找到）
 （自己写一个）
+
+## 另外
+脚本使用有道词典
