@@ -1,9 +1,25 @@
 # Lookitup
 一个查词用的py脚本
+
+## 安装
+一步一步安装
+```bash
+git clone https://github.com/DreamOneX/Lookitup.git
+cd Lookitup
+pip install -r requirements.txt
+cp ./dict.py /usr/bin/dict
+cd ..
+```
+直接搞定
+```bash
+git clone https://github.com/DreamOneX/Lookitup.git&&cd Lookitup&&pip install -r requirements.txt&&cp ./dict.py /usr/bin/dict&&cd ..
+```
+
 ## 使用
 ```bash
 python dict.py word [word ...]
 ```
+
 ## 举个栗子
 ```basg
 python dict.py hello
@@ -11,6 +27,11 @@ python dict.py hello
 #vi. 说（或大声说）“喂”；打招呼
 #n. “喂”的招呼声；打招呼，问候
 #n. （Hello）（法）埃洛（人名）
+```
+
+## 另外
+```bash
+
 ```
 ## 灵感
 （在Shell中：我超！这个词读什么啊！）
