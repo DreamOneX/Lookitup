@@ -7,24 +7,24 @@
 git clone https://github.com/DreamOneX/Lookitup.git
 cd Lookitup
 pip install -r requirements.txt
-# 以下可选（将dict.py拷贝到/usr/bin)
-cp ./dict.py /usr/bin/dict
+# 以下可选（将ydw.py拷贝到/usr/bin)
+cp ./ydw.py /usr/bin/ydw
 cd ..
 ```
 直接搞定
 ```bash
-git clone https://github.com/DreamOneX/Lookitup.git&&cd Lookitup&&pip install -r requirements.txt&&cp ./dict.py /usr/bin/dict&&cd ..
+git clone https://github.com/DreamOneX/Lookitup.git&&cd Lookitup&&pip install -r requirements.txt&&cp ./ydw.py /usr/bin/ydw&&cd ..
 ```
 
 ## 使用
 ```bash
-python dict.py word [word ...]
-dict word [word ...]
+python ydw.py word [word ...]
+ydw word [word ...]
 ```
 
 ## 举个栗子
 ```basg
-python dict.py hello
+python ydw.py hello
 #int. 喂；哈罗，你好，您好（表示问候， 惊奇或唤起注意时的用语）
 #vi. 说（或大声说）“喂”；打招呼
 #n. “喂”的招呼声；打招呼，问候

@@ -4,6 +4,7 @@ import requests
 import re
 from bs4 import BeautifulSoup
 
+
 def global_color_var() -> None:
     '''
     set global color variable
@@ -24,27 +25,36 @@ def global_color_var() -> None:
     ce = 'm'
     cm = ';'
 
+
 def main(argv):
     global_color_var()
     tmp = []
     for i in argv:
+        print(cb + fg + red + ce + i)
         try:
             for g in BeautifulSoup(requests.get('https://dict.youdao.com/search?q={}'.format(i)).text, 'html.parser').findAll('div', class_='trans-container')[0].ul.findAll('li'):
-                pos = cb + fg + blue + ce + re.search(r'[a-z]+\.',g.text).group()
-                paraphrases = re.split(r"[；]", re.sub(r"[a-z]+\. +", '', g.text))
+                try:
+                    pos = cb + fg + blue + ce + \
+                        re.search(r'[a-z]+\.', g.text).group()
+                    g_dpos = re.sub(r"[a-z]+\. +", '', g.text)
+                except AttributeError:
+                    pos = cb + fg + blue + ce + \
+                        re.search(r'【.+?】', g.text).group()
+                    g_dpos = re.sub(r'【.+?】', '', g.text)
+                paraphrases = re.split(
+                    r"[；]", re.sub(r"[a-z]+\. +", '', g_dpos))
                 for h in range(len(paraphrases)):
                     paraphrases[h] = cb + fg + yellow + ce + paraphrases[h]
 
                 print(pos + ' ' + (cb + fg + red + ce + '；').join(paraphrases))
         except IndexError:
             print('Not Found')
+        except:
+            print('An unbelievable error happened')
     return tmp
+
 
 if __name__ == '__main__':
     args = sys.argv
     del args[0]
     main(args)
-# re.search(r"[a-z]+\.", main(["one"])[0])
-# re.sub(r"[a-z]+\. +", '', main(["run"])[0])
-# re.split(r"[；]", main(["run"])[0])
-# '；'.join(re.split(r"[；]", main(["run"])[0]))
