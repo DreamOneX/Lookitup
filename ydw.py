@@ -5,29 +5,22 @@ import re
 from bs4 import BeautifulSoup
 
 
-def global_color_var() -> None:
-    '''
-    set global color variable
-    cb+fg+white+cm+bg+black+ce
-    '''
-    global fg, bg, black, red, green, yellow, blue, purple, cyan, white, cb, ce, cm
-    fg = '3'
-    bg = '4'
-    black = '0'
-    red = '1'
-    green = '2'
-    yellow = '3'
-    blue = '4'
-    purple = '5'
-    cyan = '6'
-    white = '7'
-    cb = '\033['
-    ce = 'm'
-    cm = ';'
+fg = '3'
+bg = '4'
+black = '0'
+red = '1'
+green = '2'
+yellow = '3'
+blue = '4'
+purple = '5'
+cyan = '6'
+white = '7'
+cb = '\033['
+ce = 'm'
+cm = ';'
 
 
 def main(argv):
-    global_color_var()
     tmp = []
     for i in argv:
         print(cb + fg + red + ce + i)
@@ -45,12 +38,13 @@ def main(argv):
                     r"[；]", re.sub(r"[a-z]+\. +", '', g_dpos))
                 for h in range(len(paraphrases)):
                     paraphrases[h] = cb + fg + yellow + ce + paraphrases[h]
+                    
 
                 print(pos + ' ' + (cb + fg + red + ce + '；').join(paraphrases))
         except IndexError:
             print('Not Found')
-        except:
-            print('An unbelievable error happened')
+        # except:
+        #     print('An unbelievable error happened')
     return tmp
 
 
