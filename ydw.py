@@ -36,10 +36,9 @@ def main(argv):
                     g_dpos = re.sub(r'【.+?】', '', g.text)
                 paraphrases = re.split(
                     r"[；]", re.sub(r"[a-z]+\. +", '', g_dpos))
-                for h in range(len(paraphrases)):
-                    paraphrases[h] = cb + fg + yellow + ce + paraphrases[h]
+                for h in enumerate(paraphrases):
+                    paraphrases[h[0]] = cb + fg + yellow + ce + paraphrases[h[0]]
                     
-
                 print(pos + ' ' + (cb + fg + red + ce + '；').join(paraphrases))
         except IndexError:
             print('Not Found')
