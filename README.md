@@ -1,4 +1,6 @@
 # Lookitup
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FDreamOneX%2FLookitup.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FDreamOneX%2FLookitup?ref=badge_shield)
+
 一个查词用的py脚本
 
 ## 安装
@@ -43,3 +45,7 @@ python ydw.py hello
 
 ## 另外
 脚本使用有道词典
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FDreamOneX%2FLookitup.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FDreamOneX%2FLookitup?ref=badge_large)
